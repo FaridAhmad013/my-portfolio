@@ -1,13 +1,61 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link{
+  @apply block font-sans text-gray-800 cursor-pointer lg:inline-flex md:inline-flex hover:font-semibold hover:text-gray-900;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn{
+  @apply block lg:px-4 px-3.5 lg:py-2 py-1.5 text-sm font-semibold duration-300 rounded-full lg:inline-flex md:inline-flex lg:text-base focus:outline-none focus:ring hover:scale-90 focus:scale-90;
 }
+
+.btn-primary{
+  @apply text-white bg-indigo-500 focus:ring-indigo-300 hover:bg-indigo-600 disabled:bg-opacity-60;
+}
+
+.animation-emoticon {
+  animation: animasi 3s ease infinite alternate;
+}
+
+.animation-layouting {
+  animation: layouting 2s ease infinite alternate
+}
+
+@keyframes layouting {
+ from {
+   @apply translate-x-10
+  } to {
+   @apply translate-x-0
+ } 
+}
+
+@keyframes animasi {
+   50% {
+    @apply translate-x-10   
+  } 100% {
+    @apply -translate-x-0 -scale-x-95 hue-rotate-180
+  }
+}
+
+p{
+  @apply py-3;
+}
+
+h1{
+  @apply text-3xl font-bold text-gray-700 md:text-4xl lg:text-5xl;
+}
+
+h2{
+  @apply text-2xl font-bold text-gray-700 lg:text-3xl;
+}
+
+h3{
+  @apply lg:text-2xl text-xl font-bold text-gray-700
+}
+
+.form-input{
+  @apply w-full px-4 py-2 text-sm text-gray-700 duration-300 border border-gray-400 rounded-full focus:outline-none focus:ring lg:text-base;
+}
+
+.cls-1{fill:#171321;}.cls-2{fill:#e24329;}.cls-3{fill:#fc6d26;}.cls-4{fill:#fca326;}
