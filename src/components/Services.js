@@ -25,7 +25,7 @@ const Services = () => {
         </header>
 
         <section className='w-full lg:w-1/2 md:w-1/2'>
-        <div className="flex lg:justify-center md:justify-center">
+        <div className="flex select-none lg:justify-center md:justify-center">
 
         <div className="w-full max-w-xs">
             <div className="px-2 py-3 duration-300 transform rounded-lg shadow bg-slate-100 lg:px-4 lg:py-5 ring-8 hover:translate-y-3" data-aos="flip-right">

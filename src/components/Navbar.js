@@ -2,9 +2,8 @@ import React, { useState } from "react";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false)
-  console.log(menu)
   return (
-    <nav className="mb-5 bg-transparent border-b-2 lg:border-b-0">
+    <nav className="mb-5 bg-transparent border-b-2 select-none lg:border-b-0">
       <div className="container py-5">
         <div className="flex justify-between">
           <div className="w-full lg:justify-between lg:items-center lg:flex md:flex md:justify-between md:items-center">

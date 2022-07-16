@@ -2,12 +2,13 @@ import React, { useEffect } from 'react'
 import Carousel from './carousel/Carousel'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
-import Typical from 'react-typical'
 
 const Work = () => {
+
     useEffect(() => {
         Aos.init({duration: 2000})
     }, []);
+    
   return (
     <div className='flex items-center min-h-screen' id='portfolio' data-aos="flip-up">
         <div className="container">
@@ -24,7 +25,7 @@ const Work = () => {
             </button>
             </a>
             </header>
-            <section className='w-full px-4 lg:w-7/12'>
+            <section className='w-full px-4 select-none lg:w-7/12'>
 
                 <Carousel/>
 

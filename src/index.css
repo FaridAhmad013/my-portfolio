@@ -22,6 +22,21 @@
   animation: layouting 2s ease infinite alternate
 }
 
+.jedag-jedug {
+  animation: jedagJedug 5s ease infinite;
+}
+
+@keyframes jedagJedug {
+  0% {
+    @apply hue-rotate-0
+  } 50% {
+    @apply hue-rotate-90
+  }
+   100% {
+    @apply hue-rotate-180 
+  }
+}
+
 @keyframes layouting {
  from {
    @apply translate-x-10

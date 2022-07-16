@@ -1,6 +1,6 @@
 import React from 'react'
 import BackToTop from './components/BackToTop'
-import Contact from './components/Contact'
+import Contact from './components/contact/Contact'
 import Footer from './components/Footer'
 import Intro from './components/intro/Intro'
 import Navbar from './components/Navbar'

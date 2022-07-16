@@ -7,12 +7,14 @@ const Carousel = () => {
   const carousel = useRef(null);
   const movePrev = () => {
     if (currentIndex > 0) {
+      setShowDetail(false)
       setCurrentIndex(currentIndex - 1);
     }
   };
 
   const moveNext = () => {
     if (currentIndex < datas.length) {
+      setShowDetail(false)
       setCurrentIndex(currentIndex + 1);
     }
   };
