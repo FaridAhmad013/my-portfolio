@@ -10,6 +10,9 @@ export const MyProvider = ({ children }) => {
     message: null,
     loading: false,
     disabled: false,
+    detailImage: false,
+    detailProjek: false,
+    dataImage: null
   };
 
   const [state, dispatch] = useReducer(Action, initial);
@@ -26,6 +29,18 @@ export const MyProvider = ({ children }) => {
   const setToggle = payload =>
     dispatch({type: "SET_TOGGLE", payload})
 
+  const setDetailImage = payload =>
+    dispatch({type: "SET_DETAIL_IMAGE", payload})
+
+  const setDetailProjek = payload =>
+    dispatch({type: "SET_DETAIL_PROJEK", payload})
+
+  const setDataImage = ({images, title, description}) => 
+    dispatch({type: "SET_DATA_IMAGE", payload: {
+      images,
+      title,
+      description
+    }})
   return (
     <MyContext.Provider
       value={{
@@ -33,7 +48,10 @@ export const MyProvider = ({ children }) => {
         setMessage,
         setLoading,
         setDisabled,
-        setToggle
+        setToggle,
+        setDetailImage,
+        setDetailProjek,
+        setDataImage
       }}
     >
       {children}

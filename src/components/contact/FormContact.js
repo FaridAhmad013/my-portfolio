@@ -39,7 +39,7 @@ const FormContact = () => {
         <input
           type="text"
           name="name"
-          placeholder="Masukan Nama Lengkap"
+          placeholder="Masukan Nama Lengkap kamu"
           id="name"
           className="form-input"
           required
@@ -54,7 +54,7 @@ const FormContact = () => {
           type="email"
           name="email"
           id="email"
-          placeholder="Masukan Email"
+          placeholder="Masukan Alamat Email Kamu"
           className="form-input"
           required
         />
@@ -67,8 +67,8 @@ const FormContact = () => {
         <textarea
           name="message"
           id="message"
-          placeholder="Masukan Pesan"
-          className="w-full px-4 py-2 text-sm duration-300 border border-gray-400 rounded-lg focus:outline-none focus:ring lg:text-base"
+          placeholder="Masukan Isi Pesan yang ingin kamu sampaikan"
+          className="w-full px-4 py-2 text-sm duration-300 border border-gray-300 rounded-lg focus:outline-none focus:ring lg:text-base"
           required
         ></textarea>
       </div>

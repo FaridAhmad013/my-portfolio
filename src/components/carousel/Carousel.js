@@ -1,20 +1,30 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useContext } from "react";
+import { MyContext } from "../../context/Index";
 import { datas } from "./CarouselData";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [showDetail, setShowDetail] = useState(false);
   const carousel = useRef(null);
+
+  const { 
+    setDetailImage,
+    setDataImage
+   } = useContext(MyContext)
+
+   const detailProjekHandler = ({images, title, description}) => {
+    setDetailImage(true)
+    setDataImage({images,title,description})
+  }
+
   const movePrev = () => {
     if (currentIndex > 0) {
-      setShowDetail(false)
       setCurrentIndex(currentIndex - 1);
     }
   };
 
   const moveNext = () => {
     if (currentIndex < datas.length) {
-      setShowDetail(false)
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -27,10 +37,6 @@ const Carousel = () => {
     }
   };
 
-  const detail = (e) => {
-    setShowDetail(!showDetail);
-    console.log(e);
-  };
 
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
@@ -38,7 +44,7 @@ const Carousel = () => {
     }
   }, [currentIndex]);
   return (
-    <div>
+    <>
       <div className="relative overflow-hidden rounded-xl">
         {/* Button */}
         <div className="absolute flex justify-between w-full h-full">
@@ -94,7 +100,8 @@ const Carousel = () => {
             return (
               <figure
                 key={key}
-                className="relative w-full h-[70vh] text-center lg:h-96 carousel-item snap-start"
+                className="relative w-full text-center lg:h-96 md:h-96 h-[50vh] carousel-item snap-start"
+                onClick={() => detailProjekHandler({...data})}
               >
                 <div className="z-0 block w-full h-full bg-left-top bg-no-repeat bg-cover aspect-video bg-origin-padding">
                   <img
@@ -102,38 +109,19 @@ const Carousel = () => {
                     className="object-cover w-full h-full"
                     alt={data.title}
                   />
-                  <div
-                    className={`absolute bottom-0 left-0 right-0 duration-700 ${
-                      showDetail === false && "translate-y-2/3"
-                    }`}
-                  >
-                    <button onClick={detail} title="Show Detail">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="w-10 h-10 text-indigo-600 duration-300"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+
+                  <div className="absolute inset-x-0 bottom-0">
+                    <div className="flex justify-center py-2 space-x-4">
+                      {/* Button Detail Image */}
+
+                      <button
+                        className="text-indigo-600 duration-300 hover:scale-y-150"
+                        title="Lihat Detail Projek"
+                        onClick={() => detailProjekHandler({...data})}
                       >
-                        {showDetail ? (
-                          <path
-                            fillRule="evenodd"
-                            d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        ) : (
-                          <path
-                            fillRule="evenodd"
-                            d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"
-                            clipRule="evenodd"
-                          />
-                        )}
-                      </svg>
-                    </button>
-                    <div className={`bg-indigo-400 rounded-lg text-indigo-50 `}>
-                      <h3 className="text-indigo-50">{data.title}</h3>
-                      <div className="text-sm lg:text-base"
-                        dangerouslySetInnerHTML={{ __html: data.description }}
-                      />
+                      <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" /></svg>                      </button>
+
+  
                     </div>
                   </div>
                 </div>
@@ -142,7 +130,7 @@ const Carousel = () => {
           })}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

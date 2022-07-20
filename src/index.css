@@ -22,8 +22,22 @@
   animation: layouting 2s ease infinite alternate
 }
 
+.animation-open-modal {
+  animation: animationOpenModal 2s ease 1;
+}
+
+.animation-close-modal {
+  @apply translate-y-full duration-1000
+}
+
 .jedag-jedug {
   animation: jedagJedug 5s ease infinite;
+}
+
+@keyframes animationOpenModal {
+  from {
+    @apply translate-y-full
+  } to {}
 }
 
 @keyframes jedagJedug {
@@ -46,15 +60,15 @@
 }
 
 @keyframes animasi {
-   50% {
+   from {
     @apply translate-x-10   
-  } 100% {
+  } to {
     @apply -translate-x-0 -scale-x-95 hue-rotate-180
   }
 }
 
 p{
-  @apply py-3;
+  @apply py-2 font-medium leading-relaxed;
 }
 
 h1{
@@ -70,7 +84,7 @@ h3{
 }
 
 .form-input{
-  @apply w-full px-4 py-2 text-sm text-gray-700 duration-300 border border-gray-400 rounded-full focus:outline-none focus:ring lg:text-base;
+  @apply w-full px-4 py-2 text-sm text-gray-700 duration-300 border border-gray-200 rounded-full focus:outline-none focus:ring lg:text-base;
 }
 
 .cls-1{fill:#171321;}.cls-2{fill:#e24329;}.cls-3{fill:#fc6d26;}.cls-4{fill:#fca326;}

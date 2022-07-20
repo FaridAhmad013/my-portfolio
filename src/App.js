@@ -9,7 +9,7 @@ import Work from './components/Work'
 
 const App = () => {
   return (
-    <div>
+    <div className='selection:bg-indigo-300'>
     <Navbar/>
     <Intro/>
     <Services/>

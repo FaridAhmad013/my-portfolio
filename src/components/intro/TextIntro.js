@@ -12,7 +12,7 @@ const TextIntro = () => {
               Farid Ahmad Fadhilah
             </h1>
             <p className="text-sm text-gray-700 lg:text-base">
-            <Typical steps={[`Saya fresh graduate dari smk assalaam Bandung Lulusan Tahun 2022, Walaupun saya seorang fresh graduate selama sekolah saya freelance di perusahaan CV Icommmits Karya Solusi sebagai Frontend Web Developer Selama 6 Bulan Saya Biasa Mengembangkan maupun membuat Website dari sisi Frontend dengan tampilan yang responsif dan animatif.`]} />
+            <Typical steps={[`Saya merupakan fresh graduate dari smk assalaam Bandung Lulusan Tahun 2022, Walaupun saya seorang fresh graduate selama sekolah saya bekerja freelance di perusahaan Startup CV Icommmits Karya Solusi sebagai Frontend Web Developer Selama kurang lebih 6 Bulan. Saya Biasa Mengembangkan maupun membuat Website dari sisi Frontend Tentunya Tampilannya Responsif dan animatif 😏😏😏😏.`, `Saya merupakan fresh graduate dari smk assalaam Bandung Lulusan Tahun 2022, Walaupun saya seorang fresh graduate selama sekolah saya bekerja freelance di perusahaan Startup CV Icommmits Karya Solusi sebagai Frontend Web Developer Selama kurang lebih 6 Bulan. Saya Biasa Mengembangkan maupun membuat Website dari sisi Frontend Tentunya Tampilannya Responsif dan animatif.`]} wrapper="p" />
              
             </p>
            <a href={"#contact"}>

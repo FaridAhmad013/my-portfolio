@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Carousel from './carousel/Carousel'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
+import DetailImage from './carousel/DetailImage'
 
 const Work = () => {
 
@@ -10,6 +11,7 @@ const Work = () => {
     }, []);
     
   return (
+    <>        
     <div className='flex items-center min-h-screen' id='portfolio' data-aos="flip-up">
         <div className="container">
             <div className="flex flex-wrap">
@@ -34,6 +36,9 @@ const Work = () => {
             </div>
         </div>
     </div>
+
+    <DetailImage/>
+    </>
   )
 }
 
