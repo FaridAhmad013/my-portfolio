@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import Carousel from './carousel/Carousel'
+import Carousel from './components/carousel/Carousel'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
-import DetailImage from './carousel/DetailImage'
+import DetailImage from './components/carousel/DetailImage'
 
 const Work = () => {
 

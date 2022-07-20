@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { MyContext } from "../../context/Index";
+import { MyContext } from "../../../../context/Index";
 
 const DetailImage = () => {
   const [animation, setAnimation] = useState(false);

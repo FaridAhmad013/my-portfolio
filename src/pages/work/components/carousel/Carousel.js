@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useContext } from "react";
-import { MyContext } from "../../context/Index";
-import { datas } from "./CarouselData";
+import { MyContext } from "../../../../context/Index";
+import { datas } from "../../../../data/CarouselData";
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

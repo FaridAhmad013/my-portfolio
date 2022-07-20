@@ -1,7 +1,7 @@
 import React from "react";
-import FormContact from "./FormContact";
-import MessageContact from "./MessageContact";
-import TextContact from "./TextContact";
+import FormContact from "./components/FormContact";
+import MessageContact from "./components/MessageContact";
+import TextContact from "./components/TextContact";
 
 const Contact = () => {
 

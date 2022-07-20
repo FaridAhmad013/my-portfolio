@@ -1,11 +1,11 @@
 import React from 'react'
 import BackToTop from './components/BackToTop'
-import Contact from './components/contact/Contact'
-import Footer from './components/Footer'
-import Intro from './components/intro/Intro'
-import Navbar from './components/Navbar'
-import Services from './components/Services'
-import Work from './components/Work'
+import Contact from './pages/contact/Index'
+import Footer from './layouts/Footer'
+import Intro from './pages/intro/Index'
+import Navbar from './layouts/Navbar'
+import Services from './pages/services/Index'
+import Work from './pages/work/Index'
 
 const App = () => {
   return (

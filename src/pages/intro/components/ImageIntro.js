@@ -1,6 +1,6 @@
-import Person from "../../assets/img/Mask group.png";
-import Crown from "../../assets/img/crown.png";
-import GlasesImoji from "../../assets/img/glassesimoji.png";
+import Person from "../../../assets/img/Mask group.png";
+import Crown from "../../../assets/img/crown.png";
+import GlasesImoji from "../../../assets/img/glassesimoji.png";
 
 const ImageIntro = () => {
   return (

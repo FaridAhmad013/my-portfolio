@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { MyContext } from "../../context/Index";
+import { MyContext } from "../../../context/Index";
 
 const FormContact = () => {
   const { loading, disabled, setMessage, setLoading, setDisabled, setToggle } =

@@ -1,8 +1,8 @@
 import React from "react";
 import Github from "@iconscout/react-unicons/icons/uil-github"
 import Gitlab from "@iconscout/react-unicons/icons/uil-gitlab"
-import TextIntro from "./TextIntro";
-import ImageIntro from "./ImageIntro";
+import TextIntro from "./components/TextIntro";
+import ImageIntro from "./components/ImageIntro";
 
 const Intro = () => {
   return (

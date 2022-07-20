@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import Glasess from '../assets/img/glasses.png'
-import Resume from '../assets/pdf/Farid Ahmad Fadhilah - CV.pdf'
+import Glasess from '../../assets/img/glasses.png'
+import Resume from '../../assets/pdf/Farid Ahmad Fadhilah - CV.pdf'
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 

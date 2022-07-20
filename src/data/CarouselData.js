@@ -1,14 +1,14 @@
-import Projek1 from "../../assets/img/Projek 1(1).jpg";
-import Lms from "../../assets/img/LMS.jpg";
-import Lt1 from "../../assets/img/LMS 1.jpg";
-import Lt2 from "../../assets/img/LMS 2.jpg";
-import Lt3 from "../../assets/img/LMS 3.jpg";
+import Projek1 from "../assets/img/Projek 1(1).jpg";
+import Lms from "../assets/img/LMS.jpg";
+import Lt1 from "../assets/img/LMS 1.jpg";
+import Lt2 from "../assets/img/LMS 2.jpg";
+import Lt3 from "../assets/img/LMS 3.jpg";
 
-import Pt1 from "../../assets/img/Projek 1(2).jpg"
-import Pt2 from "../../assets/img/Projek 1(3).jpg"
-import Pt3 from "../../assets/img/Projek 1(4).jpg"
-import Pt4 from "../../assets/img/Projek 1(5).jpg"
-import Pt5 from "../../assets/img/Projek 1(6).jpg"
+import Pt1 from "../assets/img/Projek 1(2).jpg"
+import Pt2 from "../assets/img/Projek 1(3).jpg"
+import Pt3 from "../assets/img/Projek 1(4).jpg"
+import Pt4 from "../assets/img/Projek 1(5).jpg"
+import Pt5 from "../assets/img/Projek 1(6).jpg"
 
 
 export  const datas = [
