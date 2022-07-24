@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Carousel from './components/carousel/Carousel'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
-import DetailImage from './components/carousel/DetailImage'
+import ShowCarousel from './components/carousel/ShowCarousel'
 
 const Work = () => {
 
@@ -37,7 +37,7 @@ const Work = () => {
         </div>
     </div>
 
-    <DetailImage/>
+    <ShowCarousel/>
     </>
   )
 }
