@@ -39,6 +39,15 @@ const Carousel = () => {
 
 
   useEffect(() => {
+    setInterval(() => {
+      if(currentIndex < datas.length){
+        setCurrentIndex(currentIndex + 1)
+      } 
+      
+      if(currentIndex > 0) {
+        setCurrentIndex(currentIndex - 1)
+      }
+    }, 4500);
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
     }
@@ -94,7 +103,7 @@ const Carousel = () => {
 
         <div
           ref={carousel}
-          className="relative flex gap-1 overflow-auto scroll-smooth snap-x touch-pan-x snap-mandatory"
+          className="relative flex gap-1 overflow-hidden scroll-smooth snap-x touch-pan-x snap-mandatory"
         >
           {datas.map((data, key) => {
             return (
@@ -103,10 +112,12 @@ const Carousel = () => {
                 className="relative w-full text-center lg:h-96 md:h-96 h-[50vh] carousel-item snap-start"
                 onClick={() => detailProjekHandler({...data})}
               >
-                <div className="z-0 block w-full h-full bg-left-top bg-no-repeat bg-cover aspect-video bg-origin-padding">
+                <div 
+                className="z-0 block w-full h-full bg-left-top bg-no-repeat bg-cover aspect-video bg-origin-padding"
+                >
                   <img
                     src={data.image}
-                    className="object-cover w-full h-full"
+                    className="object-scale-down w-full h-full"
                     alt={data.title}
                   />
 

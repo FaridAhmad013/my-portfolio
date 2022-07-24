@@ -15,7 +15,7 @@
 }
 
 .animation-emoticon {
-  animation: animasi 3s ease infinite alternate;
+  animation: emoticon 4s ease infinite alternate;
 }
 
 .animation-layouting {
@@ -23,7 +23,7 @@
 }
 
 .animation-open-modal {
-  animation: animationOpenModal 2s ease 1;
+  animation: open-modal 2s ease 1;
 }
 
 .animation-close-modal {
@@ -34,7 +34,7 @@
   animation: jedagJedug 5s ease infinite;
 }
 
-@keyframes animationOpenModal {
+@keyframes open-modal {
   from {
     @apply translate-y-full
   } to {}
@@ -59,11 +59,15 @@
  } 
 }
 
-@keyframes animasi {
-   from {
-    @apply translate-x-10   
-  } to {
-    @apply -translate-x-0 -scale-x-95 hue-rotate-180
+@keyframes emoticon {
+  0%{
+    @apply -translate-x-10
+  } 25% {
+    @apply hue-rotate-180
+  } 50% {
+    @apply -scale-x-125
+  } 100% {
+    @apply translate-x-10
   }
 }
 
