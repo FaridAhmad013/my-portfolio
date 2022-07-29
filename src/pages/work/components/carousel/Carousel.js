@@ -37,21 +37,13 @@ const Carousel = () => {
     }
   };
 
-
   useEffect(() => {
-    setInterval(() => {
-      if(currentIndex < datas.length){
-        setCurrentIndex(currentIndex + 1)
-      } 
-      
-      if(currentIndex > 0) {
-        setCurrentIndex(currentIndex - 1)
-      }
-    }, 4500);
+    
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
     }
   }, [currentIndex]);
+  
   return (
     <>
       <div className="relative overflow-hidden rounded-xl">
