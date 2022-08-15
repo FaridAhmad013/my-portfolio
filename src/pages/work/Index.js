@@ -1,45 +1,40 @@
-import React, { useEffect } from 'react'
-import Carousel from './components/carousel/Carousel'
-import 'aos/dist/aos.css'
-import Aos from 'aos'
-import ShowCarousel from './components/carousel/ShowCarousel'
+import React, { useEffect } from "react";
+import "aos/dist/aos.css";
+import Aos from "aos";
+import Show from "./components/Show";
+import Project from "./components/Project";
 
 const Work = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
-    useEffect(() => {
-        Aos.init({duration: 2000})
-    }, []);
-    
   return (
-    <>        
-    <div className='flex items-center min-h-screen' id='portfolio' data-aos="flip-up">
+    <>
+      <div className="flex min-h-screen" id="portfolio" data-aos="flip-up">
         <div className="container">
-            <div className="flex flex-wrap">
-
-            <header className='w-full lg:w-5/12'>
+          <header className="w-full text-center">
             <h1>Projek Yang Pernah Dikerjakan</h1>
             <p>
-                Berikut merupakan kumpulan projek yang pernah saya kerjakan selama menjadi freelance
+              Berikut merupakan kumpulan projek yang pernah saya kerjakan selama
+              menjadi freelance
             </p>
-            <a href={"#contact"}>                
+            {/* <a href={"#contact"}>                
             <button className='my-4 btn btn-primary lg:my-0'>
                 Hire Me
             </button>
-            </a>
-            </header>
-            <section className='w-full px-4 select-none lg:w-7/12'>
+            </a> */}
+          </header>
 
-                <Carousel/>
+          <hr className="my-5" />
 
-            </section>
-
-            </div>
+          <Project />
         </div>
-    </div>
+      </div>
 
-    <ShowCarousel/>
+      <Show />
     </>
-  )
-}
+  );
+};
 
-export default Work
+export default Work;

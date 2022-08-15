@@ -24,12 +24,6 @@ export const Action = (state, action) => {
                 disabled: action.payload
             }
 
-        case "SET_DETAIL_IMAGE":
-            return {
-                ...state,
-                detailImage: action.payload
-            }
-
         case "SET_DETAIL_PROJEK":
             return {
                 ...state,

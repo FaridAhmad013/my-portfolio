@@ -2,18 +2,13 @@ import React, { useContext, useEffect } from "react";
 import { MyContext } from "../../../context/Index";
 
 const MessageContact = () => {
-    const {
-        toggle,
-        setToggle,
-        setMessage,
-        message
-    } = useContext(MyContext)
+  const { toggle, setToggle, setMessage, message } = useContext(MyContext);
 
-    useEffect(() => {  
-      setTimeout(() => {
-        toggle && setToggle(false)
-     }, 5000);
-    }, [toggle]);
+  useEffect(() => {
+    setTimeout(() => {
+      toggle && setToggle(false);
+    }, 5000);
+  }, [toggle, setToggle]);
 
   return (
     <>

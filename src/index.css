@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .nav-link{
-  @apply block font-sans text-gray-800 cursor-pointer lg:inline-flex md:inline-flex hover:font-semibold hover:text-gray-900;
+  @apply block font-sans text-lg text-center text-gray-800 cursor-pointer lg:inline-flex md:inline-flex hover:font-semibold hover:text-gray-900 md:text-start lg:text-start;
 }
 
 .btn{
@@ -13,6 +13,19 @@
 .btn-primary{
   @apply text-white bg-indigo-500 focus:ring-indigo-300 hover:bg-indigo-600 disabled:bg-opacity-60;
 }
+
+.card {
+  @apply overflow-hidden bg-white shadow rounded-2xl aspect-video relative hover:ring
+}
+
+
+.card:hover figcaption{
+  @apply -translate-y-0
+}
+
+/* .card-hover {
+  @apply translate-y-0
+} */
 
 .animation-emoticon {
   animation: emoticon 4s ease infinite alternate;
@@ -85,6 +98,10 @@ h2{
 
 h3{
   @apply lg:text-2xl text-xl font-bold text-gray-700
+}
+
+h4{
+  @apply lg:text-xl md:text-xl text-lg text-gray-700 font-semibold tracking-wide
 }
 
 .form-input{

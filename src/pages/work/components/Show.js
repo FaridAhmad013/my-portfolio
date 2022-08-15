@@ -1,14 +1,14 @@
 import React, { useContext, useState } from "react";
-import { MyContext } from "../../../../context/Index";
+import { MyContext } from "../../../context/Index";
 
-const ShowCarousel = () => {
+const Show = () => {
   const [animation, setAnimation] = useState(false);
   const [selectImage, setSelectImage] = useState(0);
-  const { dataImage, detailImage, setDetailImage } = useContext(MyContext);
+  const { detailProjek, setDetailProject } = useContext(MyContext);
 
   return (
     <>
-      {detailImage && (
+      {detailProjek.detail && (
         <div className="fixed inset-0 bg-gray-800 bg-opacity-70 z-[99999]">
           <div className="flex items-end justify-center h-full">
             <div
@@ -21,7 +21,7 @@ const ShowCarousel = () => {
               <header className="mb-10">
                 <div className="flex items-center justify-between fixed top-[4%] inset-x-0 w-full py-5 px-4 bg-white rounded-t-xl">
                   <div className="text-lg font-semibold tracking-wide text-indigo-600">
-                    {dataImage.title}
+                    {detailProjek.title}
                   </div>
                   <div>
                     <button
@@ -29,9 +29,9 @@ const ShowCarousel = () => {
                       onClick={() => {
                         setAnimation(true);
                         setTimeout(() => {
-                          setDetailImage(false);
+                          setDetailProject({ detail: false });
                           setAnimation(false);
-                        setSelectImage(0)
+                          setSelectImage(0);
                         }, 1000);
                       }}
                     >
@@ -57,22 +57,22 @@ const ShowCarousel = () => {
               <div className="flex flex-wrap justify-between select-none">
                 <div className="lg:w-4/5 md:w-4/5 w-full lg:h-[80vh] md:h-[80vh] h-full overflow-hidden rounded-lg">
                   <img
-                    src={dataImage.images[selectImage]}
-                    alt={dataImage.title}
-                    srcset={dataImage.title}
+                    src={detailProjek.images[selectImage]}
+                    alt={detailProjek.title}
+                    srcset={detailProjek.title}
                     className="object-fill w-full h-full overflow-auto"
                   />
                 </div>
-                <div 
-                className="px-4 lg:pt-0 md:pt-0 pt-4 overflow-auto lg:h-[80vh] md:h-[80vh] lg:w-1/5 md:w-1/5 w-full">
+                <div className="px-4 lg:pt-0 md:pt-0 pt-4 overflow-auto lg:h-[80vh] md:h-[80vh] lg:w-1/5 md:w-1/5 w-full">
                   <div className="flex overflow-x-auto lg:flex-wrap md:flex-wrap">
-                    {dataImage.images.map((data, key) => {
+                    {detailProjek.images.map((data, key) => {
                       return (
                         <div className="min-w-max lg:min-w-fit md:min-w-fit">
                           <div
                             key={key}
                             className="px-1 pb-4 rounded-lg w-28 lg:w-full md:w-full"
                             onClick={() => setSelectImage(key)}
+                            onMouseOver={() => setSelectImage(key)}
                           >
                             <img
                               src={data}
@@ -93,7 +93,7 @@ const ShowCarousel = () => {
               <hr className="my-10 lg:my-16 md:my-16" />
               <section
                 className="w-full text-sm text-justify text-gray-700 lg:w-4/5 md:w-4/5 lg:text-base md:text-base indent-6"
-                dangerouslySetInnerHTML={{ __html: dataImage.description }}
+                dangerouslySetInnerHTML={{ __html: detailProjek.description }}
               ></section>
             </div>
           </div>
@@ -103,4 +103,4 @@ const ShowCarousel = () => {
   );
 };
 
-export default ShowCarousel;
+export default Show;

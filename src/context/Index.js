@@ -10,9 +10,7 @@ export const MyProvider = ({ children }) => {
     message: null,
     loading: false,
     disabled: false,
-    detailImage: false,
     detailProjek: false,
-    dataImage: null
   };
 
   const [state, dispatch] = useReducer(Action, initial);
@@ -29,10 +27,7 @@ export const MyProvider = ({ children }) => {
   const setToggle = payload =>
     dispatch({type: "SET_TOGGLE", payload})
 
-  const setDetailImage = payload =>
-    dispatch({type: "SET_DETAIL_IMAGE", payload})
-
-  const setDetailProjek = payload =>
+  const setDetailProject= payload =>
     dispatch({type: "SET_DETAIL_PROJEK", payload})
 
   const setDataImage = ({images, title, description}) => 
@@ -49,8 +44,7 @@ export const MyProvider = ({ children }) => {
         setLoading,
         setDisabled,
         setToggle,
-        setDetailImage,
-        setDetailProjek,
+        setDetailProject,
         setDataImage
       }}
     >
